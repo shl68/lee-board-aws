@@ -30,6 +30,6 @@ public class POrder {
     @Column(length = 16)
     private String cardNumber;
 
-    @Column(length = 500, nullable = false)
+    @Column(length = 500) //nullable = false
     private String pitems;
 }

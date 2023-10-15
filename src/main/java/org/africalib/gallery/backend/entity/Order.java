@@ -24,6 +24,9 @@ public class Order {
     @Column(length = 500, nullable = false)
     private String address;
 
+    @Column
+    private String payment;
+
     @Column(length = 16)
     private String cardNumber;
 

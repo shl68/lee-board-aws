@@ -1,8 +1,6 @@
 package org.africalib.gallery.backend.controller;
 
-
 import io.jsonwebtoken.Claims;
-
 
 import org.africalib.gallery.backend.entity.Board;
 import org.africalib.gallery.backend.repository.BoardRepository;
@@ -32,7 +30,7 @@ public class AccountController {
         Board member = memberRepository.findByEmailAndPassword(params.get("email"), params.get("password"));
 
         if (member != null) {
-            Long id = member.getId();
+            int id = member.getId();
             String token = jwtService.getToken("id", id);
 
             Cookie cookie = new Cookie("token", token);
@@ -46,7 +44,6 @@ public class AccountController {
 
         throw new ResponseStatusException(HttpStatus.NOT_FOUND);
     }
-
 
     @PostMapping("/api/account/logout")
     public ResponseEntity logout(HttpServletResponse res) {

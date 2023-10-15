@@ -1,17 +1,19 @@
 package org.africalib.gallery.backend.entity;
 
 import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 @Getter
+@Setter
 @Entity
 @Table(name = "boards")
-public class Board {
+public class Board { // Board
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private int id;
 
     @Column
     private String email;

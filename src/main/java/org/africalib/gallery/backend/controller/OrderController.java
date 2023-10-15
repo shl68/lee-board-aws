@@ -62,6 +62,7 @@ public class OrderController {
         newOrder.setMemberId(memberId);
         newOrder.setName(dto.getName());
         newOrder.setAddress(dto.getAddress());
+        newOrder.setPayment(dto.getPayment());
         newOrder.setCardNumber(dto.getCardNumber());
         newOrder.setItems(dto.getItems());
 
